@@ -23,17 +23,13 @@ function setup() {
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
   let standRange = Math.floor(Math.random()*100)
-  appendBr();
   container.append("", "Stand User: " + person);
   container.append("", "Stand Name: " + stand);
   container.append("", "Stand Power: " + generateRandom(standPowers));
   container.append("", "Stand Range: " + standRange);
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
 }
-function appendBr() {
-  const br = document.createElement("br");
-  container.append(br);
-}
+
 function generateRandom(arr) {
   return arr[(Math.floor(Math.random() * arr.length))]
 }
