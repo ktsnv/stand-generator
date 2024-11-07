@@ -34,6 +34,7 @@ function setup() {
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
 }
 function lineBreak() {
+  const container = document.querySelector("#container");
   const br = document.createElement("br");
   container.append(br);
 }
