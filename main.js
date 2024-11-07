@@ -1,4 +1,4 @@
-setup();
+setTimeout(setup,1);
 
 function setup() {
   let person = prompt("Please enter your name", "");
@@ -47,7 +47,7 @@ function setup() {
   lineBreak();
   container.append("", "Speed: " + standSpeed);
   lineBreak();
-  container.append("", "Stand Range: " + standRange);
+  container.append("", "Stand Range: " + standRange + "m");
   lineBreak();
   container.append("", "Stand Persistence: " + standPersistence);
   lineBreak();
