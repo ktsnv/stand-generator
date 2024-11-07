@@ -1,4 +1,6 @@
+const container = document.querySelector("#container");
 setup();
+
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
@@ -21,11 +23,12 @@ function setup() {
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
   let standRange = Math.floor(Math.random()*100)
-  const user = document.createElement("p", "Stand User: " + person)
-  const name = document.createElement("p", "Stand Name: " + stand)
-  const power = document.createElement("p", "Stand Power: " + generateRandom(standPowers))
-  const range = document.createElement("p", "Stand Range: " + standRange)
-  const colors = document.createElement("p", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor))
+  container.append(br);
+  container.append("", "Stand User: " + person);
+  container.append("", "Stand Name: " + stand);
+  container.append("", "Stand Power: " + generateRandom(standPowers));
+  container.append("", "Stand Range: " + standRange);
+  container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
 }
 
 function generateRandom(arr) {
