@@ -21,6 +21,8 @@ function setup() {
     "Time Erase"
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
+  let standType1 = ["Natural","Artificial"]
+  let standType2 = ["Humanoid","Non-Humanoid"]
   let standRange = Math.floor(Math.random()*100)
   const container = document.querySelector("#container");
   container.append("", "Stand User: " + person);
@@ -32,6 +34,8 @@ function setup() {
   container.append("", "Stand Range: " + standRange);
   lineBreak();
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
+  lineBreak();
+  container.append("", "Stand Type: " + generateRandom(standType1) + " " + generateRandom(standType2));
 }
 function lineBreak() {
   const container = document.querySelector("#container");
