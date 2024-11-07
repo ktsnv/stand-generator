@@ -25,12 +25,12 @@ function setup() {
   let standType1 = ["Natural","Artificial"]
   let standType2 = ["Humanoid","Non-Humanoid"]
   
-  let standDP = random(0,5)
-  let standSpeed = random(0,5)
+  let standDP = random(1,5)
+  let standSpeed = random(1,5)
   let standRange = random(0,100)
-  let standPersistence = random(0,5)
-  let standPrecision = random(0,5)
-  let standPotential = random(0,5)
+  let standPersistence = random(1,5)
+  let standPrecision = random(1,5)
+  let standPotential = random(1,5)
   
   const container = document.querySelector("#container");
   container.append("", "Stand User: " + person);
