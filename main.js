@@ -1,4 +1,10 @@
 setTimeout(setup,1);
+var standDP = rank[random(0,5)]
+var standSpeed = rank[random(0,5)]
+var standRange = rank[random(0,5)]
+var standPersistence = rank[random(0,5)]
+var standPrecision = rank[random(0,5)]
+var standPotential = rank[random(0,5)]
 
 function setup() {
   let person = prompt("Please enter your name", "");
@@ -24,13 +30,6 @@ function setup() {
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
   let standType1 = ["Natural","Artificial"]
   let standType2 = ["Humanoid","Non-Humanoid"]
-  
-  var standDP = rank[random(0,5)]
-  var standSpeed = rank[random(0,5)]
-  var standRange = rank[random(0,5)]
-  var standPersistence = rank[random(0,5)]
-  var standPrecision = rank[random(0,5)]
-  var standPotential = rank[random(0,5)]
   
   const container = document.querySelector("#container");
   container.append("", "Stand User: " + person);
