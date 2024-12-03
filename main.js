@@ -88,7 +88,7 @@ anychart.onDocumentReady(function () {
     chart.yGrid().palette(['gray 0.1', 'gray 0.2']);
 
     // create first series
-    chart.area(data).markers(true).fill('#E55934', 0.3).stroke('#E55934');
+    chart.area(data).name('Stand').markers(true).fill('#E55934', 0.3).stroke('#E55934');
 
     // set chart title
     chart.title('Stats')
