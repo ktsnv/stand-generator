@@ -54,6 +54,7 @@ function setup() {
   lineBreak();
   container.append("", "Stand Potential: " + standPotential);
   lineBreak();
+  anychart()
 }
 function lineBreak() {
   const container = document.querySelector("#container");
@@ -66,7 +67,7 @@ function generateRandom(arr) {
 function random(min,max) {
   return Math.floor(Math.random()*(max-min)+min)
 }
-anychart.onDocumentReady(function () {
+/*anychart.onDocumentReady(function () {
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
@@ -99,4 +100,39 @@ anychart.onDocumentReady(function () {
     chart.container('container');
     // initiate chart drawing
     chart.draw();
-  });
+  });*/
+
+function anychart() {
+    var data = [
+      {x: 'Destructive Power', value: standDP},
+      {x: 'Speed', value: standSpeed},
+      {x: 'Range', value: standRange},
+      {x: 'Persistence', value: standPersistence},
+      {x: 'Precision', value: standPrecision},
+      {x: 'Potential', value: standPotential}
+    ];
+    // create radar chart
+    var chart = anychart.radar();
+
+    // set chart yScale settings
+    chart.yScale()
+      .minimum(35)
+      .maximum(65)
+      .ticks({'interval':5});
+
+    // color alternating cells
+    chart.yGrid().palette(['gray 0.1', 'gray 0.2']);
+
+    // create first series
+    chart.area(data).name('Stand').markers(true).fill('#E55934', 0.3).stroke('#E55934');
+
+    // set chart title
+    chart.title('Stats')
+      // set legend
+      .legend(false);
+
+    // set container id for the chart
+    chart.container('container');
+    // initiate chart drawing
+    chart.draw();
+}
