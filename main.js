@@ -3,7 +3,7 @@ setTimeout(setup,1);
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
-  
+  let rank = ["S","A","B","C","D","F"]
   let standPowers = [
     "Fire Manipulation",
     "Ice Manipulation",
@@ -25,12 +25,12 @@ function setup() {
   let standType1 = ["Natural","Artificial"]
   let standType2 = ["Humanoid","Non-Humanoid"]
   
-  let standDP = random(1,5)
-  let standSpeed = random(1,5)
-  let standRange = random(0,100)
-  let standPersistence = random(1,5)
-  let standPrecision = random(1,5)
-  let standPotential = random(1,5)
+  let standDP = rank[random(0,5)]
+  let standSpeed = rank[random(0,5)]
+  let standRange = rank[random(0,5)]
+  let standPersistence = rank[random(0,5)]
+  let standPrecision = rank[random(0,5)]
+  let standPotential = rank[random(0,5)]
   
   const container = document.querySelector("#container");
   container.append("", "Stand User: " + person);
@@ -47,7 +47,7 @@ function setup() {
   lineBreak();
   container.append("", "Speed: " + standSpeed);
   lineBreak();
-  container.append("", "Stand Range: " + standRange + "m");
+  container.append("", "Stand Range: " + standRange);
   lineBreak();
   container.append("", "Stand Persistence: " + standPersistence);
   lineBreak();
@@ -68,34 +68,14 @@ function random(min,max) {
   return Math.floor(Math.random()*(max-min)+min)
 }
 anychart.onDocumentReady(function () {
-    // our data from bulbapedia
-    var data1 = [
-      {x: 'Speed', value: 65},
-      {x: 'HP', value: 39},
-      {x: 'Defense', value: 43},
-      {x: 'Special Defense', value: 50},
-      {x: 'Special Attack', value: 60},
-      {x: 'Attack', value: 52}
+    var data = [
+      {x: 'Destructive Power', value: standDP},
+      {x: 'Speed', value: standSpeed},
+      {x: 'Range', value: standRange},
+      {x: 'Persistence', value: standPersistence},
+      {x: 'Precision', value: standPrecision},
+      {x: 'Potential', value: standPotential}
     ];
-
-    var data2 = [
-      {x: 'Speed', value: 45},
-      {x: 'HP', value: 45},
-      {x: 'Defense', value: 49},
-      {x: 'Special Defense', value: 65},
-      {x: 'Special Attack', value: 65},
-      {x: 'Attack', value: 49}
-    ];
-
-    var data3 = [
-      {x: 'Speed', value: 43},
-      {x: 'HP', value: 44},
-      {x: 'Defense', value: 65},
-      {x: 'Special Defense', value: 64},
-      {x: 'Special Attack', value: 50},
-      {x: 'Attack', value: 48}
-    ];
-
     // create radar chart
     var chart = anychart.radar();
 
@@ -109,14 +89,10 @@ anychart.onDocumentReady(function () {
     chart.yGrid().palette(['gray 0.1', 'gray 0.2']);
 
     // create first series
-    chart.area(data1).name('Charmander').markers(true).fill('#E55934', 0.3).stroke('#E55934');
-    // create second series
-    chart.area(data2).name('Bulbasaur').markers(true).fill('#9BC53D', 0.3).stroke('#9BC53D');
-    // create third series
-    chart.area(data3).name('Squirtle').markers(true).fill('#5BC0EB', 0.3).stroke('#5BC0EB');
+    chart.area(data).name(stand).markers(true).fill('#E55934', 0.3).stroke('#E55934');
 
     // set chart title
-    chart.title('Starter Pokemon Comparison Chart')
+    chart.title('Stats')
       // set legend
       .legend(true);
 
