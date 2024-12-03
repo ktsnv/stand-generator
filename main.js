@@ -2,7 +2,7 @@ setTimeout(setup,1);
 
 function setup() {
   let person = prompt("Please enter your name", "");
-  let stand = prompt("Please enter your stand's name", "");
+  const stand = prompt("Please enter your stand's name", "");
   let rank = ["S","A","B","C","D","F"]
   let standPowers = [
     "Fire Manipulation",
@@ -25,12 +25,12 @@ function setup() {
   let standType1 = ["Natural","Artificial"]
   let standType2 = ["Humanoid","Non-Humanoid"]
   
-  let standDP = rank[random(0,5)]
-  let standSpeed = rank[random(0,5)]
-  let standRange = rank[random(0,5)]
-  let standPersistence = rank[random(0,5)]
-  let standPrecision = rank[random(0,5)]
-  let standPotential = rank[random(0,5)]
+  const standDP = rank[random(0,5)]
+  const standSpeed = rank[random(0,5)]
+  const standRange = rank[random(0,5)]
+  const standPersistence = rank[random(0,5)]
+  const standPrecision = rank[random(0,5)]
+  const standPotential = rank[random(0,5)]
   
   const container = document.querySelector("#container");
   container.append("", "Stand User: " + person);
