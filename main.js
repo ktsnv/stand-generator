@@ -8,7 +8,7 @@ var standPotential = rank[random(0,5)]
 
 function setup() {
   let person = prompt("Please enter your name", "");
-  var stand = prompt("Please enter your stand's name", "");
+  let stand = prompt("Please enter your stand's name", "");
   let rank = ["S","A","B","C","D","F"]
   let standPowers = [
     "Fire Manipulation",
@@ -88,12 +88,12 @@ anychart.onDocumentReady(function () {
     chart.yGrid().palette(['gray 0.1', 'gray 0.2']);
 
     // create first series
-    chart.area(data).name(stand).markers(true).fill('#E55934', 0.3).stroke('#E55934');
+    chart.area(data).markers(true).fill('#E55934', 0.3).stroke('#E55934');
 
     // set chart title
     chart.title('Stats')
       // set legend
-      .legend(true);
+      .legend(false);
 
     // set container id for the chart
     chart.container('container');
