@@ -1,15 +1,15 @@
 setTimeout(setup,1);
-var standDP = rank[random(0,5)]
-var standSpeed = rank[random(0,5)]
-var standRange = rank[random(0,5)]
-var standPersistence = rank[random(0,5)]
-var standPrecision = rank[random(0,5)]
-var standPotential = rank[random(0,5)]
+let rank = ["S","A","B","C","D","F"]
+let standDP = rank[random(0,5)]
+let standSpeed = rank[random(0,5)]
+let standRange = rank[random(0,5)]
+let standPersistence = rank[random(0,5)]
+let standPrecision = rank[random(0,5)]
+let standPotential = rank[random(0,5)]
 
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
-  let rank = ["S","A","B","C","D","F"]
   let standPowers = [
     "Fire Manipulation",
     "Ice Manipulation",
