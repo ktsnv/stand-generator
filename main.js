@@ -25,7 +25,24 @@ function setup() {
     "Time Stop",
     "Time Reversal",
     "Time Acceleration",
-    "Time Erase"
+    "Time Erase",
+    "Possession",
+    "Sand Manipulation",
+    "Homing Bullets",
+    "Scale Projectiles",
+    "Ship Manipulation",
+    "Object Possession",
+    "Appearance Replication",
+    "Light Manifestation",
+    "Liquid Manifestation",
+    "Sand Manifestation",
+    "Parasitism",
+    "Flesh Disguise",
+    "Fog String Puppetry",
+    "Sun Replica",
+    "Lasers",
+    "Dream World Control",
+    "Pain Synchronization"
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
   let standType1 = ["Natural","Artificial"]
