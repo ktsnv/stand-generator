@@ -1,5 +1,5 @@
 setTimeout(setup,1);
-let rank = ["S","A","B","C","D","F"]
+let rank = ["F","D","C","B","A","S"]
 let standDP = random(0,5)
 let standSpeed = random(0,5)
 let standRange = random(0,5)
