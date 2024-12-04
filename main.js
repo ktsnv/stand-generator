@@ -1,11 +1,11 @@
 setTimeout(setup,1);
 let rank = ["S","A","B","C","D","F"]
-let standDP = rank[random(0,5)]
-let standSpeed = rank[random(0,5)]
-let standRange = rank[random(0,5)]
-let standPersistence = rank[random(0,5)]
-let standPrecision = rank[random(0,5)]
-let standPotential = rank[random(0,5)]
+let standDP = random(0,5)
+let standSpeed = random(0,5)
+let standRange = random(0,5)
+let standPersistence = random(0,5)
+let standPrecision = random(0,5)
+let standPotential = random(0,5)
 
 function setup() {
   let person = prompt("Please enter your name", "");
@@ -42,17 +42,17 @@ function setup() {
   lineBreak();
   container.append("", "Type: " + generateRandom(standType1) + " " + generateRandom(standType2));
   lineBreak();
-  container.append("", "Destructive Power: " + standDP);
+  container.append("", "Destructive Power: " + rank[standDP]);
   lineBreak();
-  container.append("", "Speed: " + standSpeed);
+  container.append("", "Speed: " + rank[standSpeed]);
   lineBreak();
-  container.append("", "Stand Range: " + standRange);
+  container.append("", "Stand Range: " + rank[standRange]);
   lineBreak();
-  container.append("", "Stand Persistence: " + standPersistence);
+  container.append("", "Stand Persistence: " + rank[standPersistence]);
   lineBreak();
-  container.append("", "Stand Precision: " + standPrecision);
+  container.append("", "Stand Precision: " + rank[standPrecision]);
   lineBreak();
-  container.append("", "Stand Potential: " + standPotential);
+  container.append("", "Stand Potential: " + rank[standPotential]);
   lineBreak();
 }
 function lineBreak() {
