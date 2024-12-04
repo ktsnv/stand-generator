@@ -80,8 +80,8 @@ anychart.onDocumentReady(function () {
 
     // set chart yScale settings
     chart.yScale()
-      .minimum(35)
-      .maximum(65)
+      .minimum(0)
+      .maximum(5)
       .ticks({'interval':5});
 
     // color alternating cells
