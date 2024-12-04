@@ -82,7 +82,7 @@ anychart.onDocumentReady(function () {
     chart.yScale()
       .minimum(0)
       .maximum(5)
-      .ticks({'interval':5});
+      .ticks({'interval':1});
 
     // color alternating cells
     chart.yGrid().palette(['gray 0.1', 'gray 0.2']);
