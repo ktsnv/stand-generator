@@ -1,11 +1,11 @@
 setTimeout(setup,1);
-let rank = ["F","D","C","B","A","S"]
-let standDP = random(0,5)
-let standSpeed = random(0,5)
-let standRange = random(0,5)
-let standPersistence = random(0,5)
-let standPrecision = random(0,5)
-let standPotential = random(0,5)
+let rank = ["F","E","D","C","B","A","S"]
+let standDP = random(0,6)
+let standSpeed = random(0,6)
+let standRange = random(0,6)
+let standPersistence = random(0,6)
+let standPrecision = random(0,6)
+let standPotential = random(0,6)
 
 function setup() {
   let person = prompt("Please enter your name", "");
@@ -81,7 +81,7 @@ anychart.onDocumentReady(function () {
     // set chart yScale settings
     chart.yScale()
       .minimum(0)
-      .maximum(5)
+      .maximum(6)
       .ticks({'interval':1});
 
     // color alternating cells
