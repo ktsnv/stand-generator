@@ -1,5 +1,5 @@
 setTimeout(setup,1);
-let rank = ["F","E","D","C","B","A","S"]
+let rank = ["F","E","D","C","B","A","Infinite"]
 let standDP = random(0,6)
 let standSpeed = random(0,6)
 let standRange = random(0,6)
@@ -34,7 +34,7 @@ function setup() {
     "Object Possession",
     "Appearance Replication",
     "Light Manifestation",
-    "Liquid Manifestation",
+    "Water Manifestation",
     "Sand Manifestation",
     "Parasitism",
     "Flesh Disguise",
@@ -42,7 +42,84 @@ function setup() {
     "Sun Replica",
     "Lasers",
     "Dream World Control",
-    "Pain Synchronization"
+    "Pain Synchronization",
+    "Wish Granting",
+    "Mineral Assimiliation",
+    "Fire Manifestation",
+    "Face Molding",
+    "Clairvoyance Comic Book",
+    "John Toothbrush",
+    "Sword Manifestation",
+    "Shadow Manifestation",
+    "Soul Stealing (Poker Chip)",
+    "Soul Stealing (Doll)",
+    "Illusion Manipulation",
+    "Void Mouth",
+    "Restoration",
+    "Erasing",
+    "Powerful Sound Effects",
+    "Gravity Manipulation",
+    "Bomb Manipulation",
+    "Book Transmutation",
+    "Sheer Heart Attack",
+    "Soldier Manifestation",
+    "Electricity Manifestation",
+    "Electricity Manipulation",
+    "Guilt Lock",
+    "Doppleganger",
+    "Hair Manipulation",
+    "Healing",
+    "Invisibility",
+    "Colony",
+    "Picture Trap",
+    "Power Stealing",
+    "Lure Target",
+    "Air Manipulation",
+    "Power Reflecting",
+    "Paper Sealing",
+    "Life Giving",
+    "Zipper Manipulation",
+    "Past Recreation",
+    "Plane Manifestation",
+    "Poison",
+    "Softness Manipulation",
+    "Pocket Dimension",
+    "Stand Manipulation",
+    "Shadow Manipulation",
+    "Size Manipulation",
+    "Mirror World",
+    "Age Manipulation",
+    "Fishing Pole Manifestation",
+    "Iron Manipulation",
+    "Deadly Mold Manipulation",
+    "Liquefacation",
+    "String Manifestation",
+    "Wire Manifestation",
+    "Sticker Duplication",
+    "Weather Manipulation",
+    "Store Energy",
+    "Stand/Memory Steal (CD)",
+    "Zero Gravity",
+    "Zombie Creation",
+    "Aggresiveness Manipulation",
+    "Feng Shui",
+    "Acid Saliva",
+    "Memory Locking",
+    "Fiction Creation",
+    "Nail Shot",
+    "Flesh Spray",
+    "Reality Hopping",
+    "Love Train",
+    "Invunerability while standing still",
+    "Bubble Creation",
+    "Bubble Creation (Go Beyond)",
+    "Technology Manipulation",
+    "Smell Tracking",
+    "Nuts and Bolts",
+    "Card Storing",
+    "Calamity",
+    "Face Differention",
+    "Heat Manipulation",
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
   let standType1 = ["Natural","Artificial"]
@@ -53,8 +130,15 @@ function setup() {
   lineBreak();
   container.append("", "Stand Name: " + stand);
   lineBreak();
-  container.append("", "Ability: " + generateRandom(standPowers));
+  container.append("", "Ability: ");
   lineBreak();
+  let i = 0;
+  let r = random(1,3);
+  while (i<r)
+  {
+    i++;
+    container.append("",generateRandom(standPowers));
+  }
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
   lineBreak();
   container.append("", "Type: " + generateRandom(standType1) + " " + generateRandom(standType2));
