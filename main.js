@@ -168,7 +168,7 @@ function generateRandom(arr) {
 function random(min,max) {
   return Math.floor(Math.random()*(max-min)+min)
 }
-anychart.onDocumentReady(setTimeout(function (),5) {
+anychart.onDocumentReady(function () {
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
