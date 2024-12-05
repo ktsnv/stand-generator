@@ -138,6 +138,7 @@ function setup() {
   {
     i++;
     container.append("",generateRandom(standPowers));
+    lineBreak();
   }
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
   lineBreak();
