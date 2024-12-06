@@ -16,7 +16,7 @@ function setup() {
   fetch('standPowers.txt')
   .then(response => response.text())
   .then((data) => {
-    console.log(data)
+    let powerData = data;
   })
   let standPowers = powerData.split(",");
   let standRequiemPowers = [
