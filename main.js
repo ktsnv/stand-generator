@@ -214,7 +214,7 @@ function createChart()
       .ticks({'interval':1});
 
     // color alternating cells
-    chart.yGrid().palette(['Black', 'Black 0']);
+    chart.yGrid().palette(['Black 0', 'Black 0']);
     chart.area(data).name('Stand').fill('#FF69B4', 0.3).stroke('#E55934', 0);
     chart.legend(false);
     chart.background().fill("red", 0);
