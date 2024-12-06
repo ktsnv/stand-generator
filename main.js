@@ -222,6 +222,7 @@ function createChart()
     chart.title('Stats')
       // set legend
       .legend(false);
+    .fontColor('White')
     chart.background().fill("red", 0);
     // set container id for the chart
     chart.container('container');
