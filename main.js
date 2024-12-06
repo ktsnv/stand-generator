@@ -195,7 +195,7 @@ function random(min,max) {
 }
 function createChart()
 {
-    anychart.theme({defaultFontSettings: {fontColor: 'White', fontSize: '25'}});
+    anychart.theme({defaultFontSettings: {fontColor: 'White', fontSize: '50'}});
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
@@ -212,7 +212,6 @@ function createChart()
     chart.area(data).name('Stand').fill('#FF69B4', 0.75).stroke('#E55934', 0);
     chart.legend(false);
     chart.background().fill("red", 0);
-    chart.labels().fontSize(25);
     // set container id for the chart
     chart.container('container');
     // initiate chart drawing
