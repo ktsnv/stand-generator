@@ -10,12 +10,9 @@ let standRequiem = random(0,10);
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
-  let i = 0;
-  let r = random(1,3);
   if (standRequiem == 10)
   {
     stand.concat(" ", "Requiem");
-    r += 2;
   }
   let standPowers = [
     "Fire Manipulation",
@@ -29,9 +26,7 @@ function setup() {
     "Sound Manipulation",
     "Blood Manipulation",
     "Mind Control",
-    "Time Stop",
     "Time Reversal",
-    "Time Acceleration",
     "Time Erase",
     "Possession",
     "Sand Manipulation",
@@ -91,7 +86,6 @@ function setup() {
     "Poison",
     "Softness Manipulation",
     "Pocket Dimension",
-    "Stand Manipulation",
     "Shadow Manipulation",
     "Size Manipulation",
     "Mirror World",
@@ -116,7 +110,6 @@ function setup() {
     "Nail Shot",
     "Flesh Spray",
     "Reality Hopping",
-    "Love Train",
     "Invunerability while standing still",
     "Bubble Creation",
     "Bubble Creation (Go Beyond)",
@@ -124,9 +117,20 @@ function setup() {
     "Smell Tracking",
     "Nuts and Bolts",
     "Card Storing",
-    "Calamity",
     "Face Differention",
     "Heat Manipulation",
+  ]
+  let standRequiemPowers = [
+    "Stand Manipulation",
+    "Love Train",
+    "Nullification",
+    "Time Stop",
+    "Time Acceleration",
+    "Return to Zero",
+    "Infinite Death Loop",
+    "Soul Manipulation",
+    "Regeneration"
+    "Bites the Dust"
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
   let standType1 = ["Natural","Artificial"]
@@ -139,10 +143,26 @@ function setup() {
   lineBreak();
   container.append("", "Ability: ");
   lineBreak();
+  let i = 0;
+  let r = random(1,3);
   while (i<r)
   {
     i++;
-    container.append("",generateRandom(standPowers));
+    let temp = generateRandom(standPowers);
+    container.append("",temp);
+    const index = standPowers.indexOf(temp);
+    if (index > -1) {
+      standPowers.splice(index, 1);
+    }
+    if (standRequiem == 10)
+    {
+      let temp = generateRandom(standRequiemPowers);
+      container.append("",temp);
+      const index = standRequiemPowers.indexOf(temp);
+      if (index > -1) {
+        standRequiemPowers.splice(index, 1);
+      }
+    }
     lineBreak();
   }
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
