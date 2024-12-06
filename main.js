@@ -109,12 +109,11 @@ function createChart()
     // initiate chart drawing
     chart.draw();
 }
-function loadTextFile(path){
-    return new Promise((resolve, reject) => {
-        fetch(path)
-        .then(response => response.text(), reject)
-        .then(data => resolve(data), reject);
-    });
+function loadTextFile(url){
+     fetch(url)
+    .then(response => response.text(), reject)
+    .then(data => resolve(data), reject);
+    return data.split('\n');
 }
 /*function fetchData() {
     fetch('standPowers.txt')
