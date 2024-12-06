@@ -1,4 +1,4 @@
-setTimeout(setup,1);
+anychart.onDocumentReady(setTimeout(setup,1));
 let rank = ["F","E","D","C","B","A","Infinite"]
 let standDP = random(0,6)
 let standSpeed = random(0,6)
@@ -156,6 +156,7 @@ function setup() {
   lineBreak();
   container.append("", "Stand Potential: " + rank[standPotential]);
   lineBreak();
+  createChart();
 }
 function lineBreak() {
   const container = document.querySelector("#container");
@@ -163,12 +164,13 @@ function lineBreak() {
   container.append(br);
 }
 function generateRandom(arr) {
-  return arr[(Math.floor(Math.random() * arr.length))]
+  return arr[random(0,arr.length)]
 }
 function random(min,max) {
   return Math.floor(Math.random()*(max-min)+min)
 }
-anychart.onDocumentReady(function () {
+function createChart()
+{
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
@@ -201,4 +203,4 @@ anychart.onDocumentReady(function () {
     chart.container('container');
     // initiate chart drawing
     chart.draw();
-  });
+}
