@@ -18,7 +18,7 @@ function setup() {
   .then((data) => {
     console.log(data);
     console.log(data.split(","));
-    const standPowers = data.split(",");
+    let standPowers = data.split("\n");
   })
   let standRequiemPowers = [
     "Stand Manipulation",
