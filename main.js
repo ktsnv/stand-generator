@@ -109,7 +109,7 @@ function createChart()
     // initiate chart drawing
     chart.draw();
 }
-function loadTextFile(path){
+async function loadTextFile(path){
     return new Promise((resolve, reject) => {
         fetch(path)
         .then(response => response.text(), reject)
