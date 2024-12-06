@@ -13,7 +13,7 @@ function setup() {
   {
     stand += " Requiem";
   }
-  let standPowers = fetchData();
+  let standPowers = await fetch('standPowers.txt').split('\n');
   let standRequiemPowers = [
     "Stand Manipulation",
     "Love Train",
@@ -109,7 +109,7 @@ function createChart()
     // initiate chart drawing
     chart.draw();
 }
-function fetchData() {
+/*function fetchData() {
     fetch('standPowers.txt')
   .then(response => response.text())
   .then((data) => {
@@ -118,4 +118,4 @@ function fetchData() {
     console.log(temp);
     return temp;
   })
-}
+}*/
