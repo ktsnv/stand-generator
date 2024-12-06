@@ -129,7 +129,7 @@ function setup() {
     "Return to Zero",
     "Infinite Death Loop",
     "Soul Manipulation",
-    "Regeneration"
+    "Regeneration",
     "Bites the Dust"
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
