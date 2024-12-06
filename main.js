@@ -13,13 +13,7 @@ function setup() {
   {
     stand += " Requiem";
   }
-  fetch('standPowers.txt')
-  .then(response => response.text())
-  .then((data) => {
-    console.log(data);
-    console.log(data.split("\n"));
-    let standPowers = data.split("\n");
-  })
+  let standPowers = fetchData();
   let standRequiemPowers = [
     "Stand Manipulation",
     "Love Train",
@@ -114,4 +108,13 @@ function createChart()
     chart.container('container');
     // initiate chart drawing
     chart.draw();
+}
+function fetchData() {
+    fetch('standPowers.txt')
+  .then(response => response.text())
+  .then((data) => {
+    console.log(data);
+    console.log(data.split("\n"));
+    return data.split("\n");
+  })
 }
