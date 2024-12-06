@@ -135,12 +135,9 @@ function setup() {
   let standType1 = ["Natural","Artificial"]
   let standType2 = ["Humanoid","Non-Humanoid"]  
   const container = document.querySelector("#container");
-  container.append("", "Stand User: " + person);
-  lineBreak();
-  container.append("", "Stand Master: " + stand);
-  lineBreak();
-  container.append("", "Ability: ");
-  lineBreak();
+  header("Stand Master: " + person);
+  header("Stand: " + stand);
+  header("Abilities: ");
   let i = 0;
   let r = random(1,3);
   while (i<r)
@@ -164,23 +161,16 @@ function setup() {
       }
     }
   }
-  header("Stand Colors:")
-  container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
-  lineBreak();
-  container.append("", "Type: " + generateRandom(standType1) + " " + generateRandom(standType2));
-  lineBreak();
-  container.append("", "Destructive Power: " + rank[standDP]);
-  lineBreak();
-  container.append("", "Speed: " + rank[standSpeed]);
-  lineBreak();
-  container.append("", "Stand Range: " + rank[standRange]);
-  lineBreak();
-  container.append("", "Stand Persistence: " + rank[standPersistence]);
-  lineBreak();
-  container.append("", "Stand Precision: " + rank[standPrecision]);
-  lineBreak();
-  container.append("", "Stand Potential: " + rank[standPotential]);
-  lineBreak();
+  header("Colors: ");
+  container.append(generateRandom(standColor) + " and " + generateRandom(standColor));
+  header("Type: ");
+  container.append(generateRandom(standType1) + " " + generateRandom(standType2));
+  header("Destructive Power: "+ rank[standDP]);
+  header("Speed: "+ rank[standSpeed]);
+  header("Range: "+ rank[standRange]);
+  header("Persistence: "+ rank[standPersistence]);
+  header("Precision: "+ rank[standPrecision]);
+  header("Potential: "+ rank[standPotential]);
   createChart();
 }
 function lineBreak() {
