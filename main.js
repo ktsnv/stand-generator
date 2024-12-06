@@ -18,7 +18,7 @@ function setup() {
   .then((data) => {
     console.log(data)
   })
-  let standPowers = powerData.split(/\r?\n|\r|\n/g);
+  let standPowers = powerData.split(",");
   let standRequiemPowers = [
     "Stand Manipulation",
     "Love Train",
