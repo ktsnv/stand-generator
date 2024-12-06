@@ -6,7 +6,7 @@ let standRange = random(0,6);
 let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
-const standPowers = await loadTextFile('standPowers.txt'); 
+const standPowers = loadTextFile('standPowers.txt'); 
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
@@ -109,7 +109,7 @@ function createChart()
     // initiate chart drawing
     chart.draw();
 }
-async function loadTextFile(path){
+function loadTextFile(path){
     return new Promise((resolve, reject) => {
         fetch(path)
         .then(response => response.text(), reject)
