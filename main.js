@@ -215,10 +215,10 @@ function createChart()
 
     // color alternating cells
     chart.yGrid().palette(['Black', 'Black 0']);
-    chart.fontSize(25);
     chart.area(data).name('Stand').fill('#FF69B4', 0.3).stroke('#E55934', 0);
     chart.legend(false);
     chart.background().fill("red", 0);
+    char.labels().fontSize(25);
     // set container id for the chart
     chart.container('container');
     // initiate chart drawing
