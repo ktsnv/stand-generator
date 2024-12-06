@@ -138,7 +138,7 @@ function setup() {
   const container = document.querySelector("#container");
   container.append("", "Stand User: " + person);
   lineBreak();
-  container.append("", "Stand Name: " + stand);
+  container.append("", "Stand Master: " + stand);
   lineBreak();
   container.append("", "Ability: ");
   lineBreak();
