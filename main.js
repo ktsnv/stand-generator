@@ -6,6 +6,7 @@ let standRange = random(0,6);
 let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
+let standPowers = await fetch('standPowers.txt').split('\n');
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
@@ -13,7 +14,6 @@ function setup() {
   {
     stand += " Requiem";
   }
-  let standPowers = await fetch('standPowers.txt').split('\n');
   let standRequiemPowers = [
     "Stand Manipulation",
     "Love Train",
