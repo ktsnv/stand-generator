@@ -6,7 +6,7 @@ let standRange = random(0,6);
 let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
-let standPowers = await fetch('standPowers.txt').split('\n');
+let standPowers = test(); 
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
@@ -108,6 +108,10 @@ function createChart()
     chart.container('container');
     // initiate chart drawing
     chart.draw();
+}
+async function test() {
+  const text = await fetch('standPowers.txt').then($ => $.text())
+  return text.split('\n');
 }
 /*function fetchData() {
     fetch('standPowers.txt')
