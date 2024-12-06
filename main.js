@@ -1,15 +1,22 @@
 anychart.onDocumentReady(setTimeout(setup,1));
-let rank = ["F","E","D","C","B","A","Infinite"]
-let standDP = random(0,6)
-let standSpeed = random(0,6)
-let standRange = random(0,6)
-let standPersistence = random(0,6)
-let standPrecision = random(0,6)
-let standPotential = random(0,6)
-
+let rank = ["F","E","D","C","B","A","Infinite"];
+let standDP = random(0,6);
+let standSpeed = random(0,6);
+let standRange = random(0,6);
+let standPersistence = random(0,6);
+let standPrecision = random(0,6);
+let standPotential = random(0,6);
+let standRequiem = random(0,10);
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
+  let i = 0;
+  let r = random(1,3);
+  if (standRequiem == 10)
+  {
+    stand.concat(" ", "Requiem");
+    r += 2;
+  }
   let standPowers = [
     "Fire Manipulation",
     "Ice Manipulation",
@@ -132,8 +139,6 @@ function setup() {
   lineBreak();
   container.append("", "Ability: ");
   lineBreak();
-  let i = 0;
-  let r = random(1,3);
   while (i<r)
   {
     i++;
