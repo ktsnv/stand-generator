@@ -195,7 +195,7 @@ function random(min,max) {
 }
 function createChart()
 {
-    anychart.theme({defaultFontSettings: {fontColor: 'White' fontSize: '25'}});
+    anychart.theme({defaultFontSettings: {fontColor: 'White', fontSize: '25'}});
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
