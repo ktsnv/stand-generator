@@ -6,7 +6,7 @@ let standRange = random(0,6);
 let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
-let standPowers = await loadTextFile('standPowers.txt'); 
+const standPowers = await loadTextFile('standPowers.txt'); 
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
