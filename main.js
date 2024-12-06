@@ -192,7 +192,7 @@ function generateRandom(arr) {
   return arr[random(0,arr.length)]
 }
 function random(min,max) {
-  return Math.floor(Math.random()*(max-min)+min)
+  return Math.round(Math.random()*(max-min)+min)
 }
 function createChart()
 {
