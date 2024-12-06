@@ -113,8 +113,9 @@ function fetchData() {
     fetch('standPowers.txt')
   .then(response => response.text())
   .then((data) => {
-    console.log(data);
     console.log(data.split("\n"));
-    return data.split("\n");
+    let temp = data.split("\n");
+    console.log(temp);
+    return temp;
   })
 }
