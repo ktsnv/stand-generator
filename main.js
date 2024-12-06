@@ -188,7 +188,7 @@ function lineBreak() {
   container.append(br);
 }
 function generateRandom(arr) {
-  return arr[random(0,arr.length)]
+  return arr[random(0,arr.length-1)]
 }
 function random(min,max) {
   return Math.round(Math.random()*(max-min)+min)
