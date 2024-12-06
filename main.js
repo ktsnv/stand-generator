@@ -195,6 +195,7 @@ function random(min,max) {
 }
 function createChart()
 {
+    anychart.theme({defaultFontSettings: {fontColor: 'white'}});
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
@@ -222,7 +223,6 @@ function createChart()
     chart.title('Stats')
       // set legend
       .legend(false);
-    .fontColor('White')
     chart.background().fill("red", 0);
     // set container id for the chart
     chart.container('container');
