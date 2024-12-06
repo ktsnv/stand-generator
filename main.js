@@ -195,7 +195,7 @@ function random(min,max) {
 }
 function createChart()
 {
-    anychart.theme({defaultFontSettings: {fontColor: 'Black'}});
+    anychart.theme({defaultFontSettings: {fontColor: 'White' fontSize: '25'}});
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
@@ -204,17 +204,11 @@ function createChart()
       {x: 'Precision', value: standPrecision},
       {x: 'Potential', value: standPotential}
     ];
-    // create radar chart
     var chart = anychart.radar();
-
-    // set chart yScale settings
     chart.yScale()
       .minimum(0)
       .maximum(6)
       .ticks({'interval':1});
-
-    // color alternating cells
-    chart.yGrid().palette('Black 0');
     chart.area(data).name('Stand').fill('#FF69B4', 0.75).stroke('#E55934', 0);
     chart.legend(false);
     chart.background().fill("red", 0);
