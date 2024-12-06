@@ -195,7 +195,7 @@ function random(min,max) {
 }
 function createChart()
 {
-    anychart.theme({defaultFontSettings: {fontColor: 'white'}});
+    anychart.theme({defaultFontSettings: {fontColor: 'Black'}});
     var data = [
       {x: 'Destructive Power', value: standDP},
       {x: 'Speed', value: standSpeed},
@@ -214,15 +214,9 @@ function createChart()
       .ticks({'interval':1});
 
     // color alternating cells
-    chart.yGrid().palette(['gray 0.1', 'gray 0.2']);
-
-    // create first series
-    chart.area(data).name('Stand').markers(true).fill('#E55934', 0.3).stroke('#E55934');
-
-    // set chart title
-    chart.title('Stats')
-      // set legend
-      .legend(false);
+    chart.yGrid().palette(['Black', 'Black']);
+    chart.area(data).name('Stand').markers(true).fill('#FF69B4', 0.3).stroke('#E55934', 0);
+    chart.legend(false);
     chart.background().fill("red", 0);
     // set container id for the chart
     chart.container('container');
