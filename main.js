@@ -6,11 +6,10 @@ let standRange = random(0,6);
 let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
-let standRequiem = random(0,10);
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
-  if (standRequiem == 10)
+  if (standPotential == 6)
   {
     stand.concat(" ", "Requiem");
   }
@@ -154,7 +153,7 @@ function setup() {
     if (index > -1) {
       standPowers.splice(index, 1);
     }
-    if (standRequiem == 10)
+    if (standPotential == 6)
     {
       let temp = generateRandom(standRequiemPowers);
       container.append("",temp);
