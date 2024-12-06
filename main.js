@@ -164,6 +164,7 @@ function setup() {
       }
     }
   }
+  header("Stand Colors:")
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
   lineBreak();
   container.append("", "Type: " + generateRandom(standType1) + " " + generateRandom(standType2));
@@ -186,6 +187,12 @@ function lineBreak() {
   const container = document.querySelector("#container");
   const br = document.createElement("br");
   container.append(br);
+}
+function header(arr) {
+  const container = document.querySelector("#container");
+  const header = document.createElement("h1");
+  header.textContent = arr;
+  container.append(header);
 }
 function generateRandom(arr) {
   return arr[random(0,arr.length-1)]
