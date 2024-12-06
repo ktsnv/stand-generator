@@ -133,8 +133,7 @@ function setup() {
   ]
   let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
   let standType1 = ["Natural","Artificial"]
-  let standType2 = ["Humanoid","Non-Humanoid"]
-  
+  let standType2 = ["Humanoid","Non-Humanoid"]  
   const container = document.querySelector("#container");
   container.append("", "Stand User: " + person);
   lineBreak();
