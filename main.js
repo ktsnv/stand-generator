@@ -11,7 +11,7 @@ function setup() {
   let stand = prompt("Please enter your stand's name", "");
   if (standPotential == 6)
   {
-    stand.concat(" ", "Requiem");
+    stand += " Requiem";
   }
   let standPowers = [
     "Fire Manipulation",
@@ -149,6 +149,7 @@ function setup() {
     i++;
     let temp = generateRandom(standPowers);
     container.append("",temp);
+    lineBreak();
     const index = standPowers.indexOf(temp);
     if (index > -1) {
       standPowers.splice(index, 1);
@@ -157,12 +158,12 @@ function setup() {
     {
       let temp = generateRandom(standRequiemPowers);
       container.append("",temp);
+      lineBreak();
       const index = standRequiemPowers.indexOf(temp);
       if (index > -1) {
         standRequiemPowers.splice(index, 1);
       }
     }
-    lineBreak();
   }
   container.append("", "Stand Colors: " + generateRandom(standColor) + " and " + generateRandom(standColor));
   lineBreak();
