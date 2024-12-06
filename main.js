@@ -13,8 +13,11 @@ function setup() {
   {
     stand += " Requiem";
   }
-  const powerData = fetch('standPowers.txt', {credentials: 'include', method: 'get'});
-  console.log(powerData);
+  fetch('standPowers.txt')
+  .then(response => response.text())
+  .then((data) => {
+    console.log(data)
+  })
   let standPowers = powerData.split(/\r?\n/);
   let standRequiemPowers = [
     "Stand Manipulation",
