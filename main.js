@@ -18,8 +18,8 @@ function setup() {
   .then((data) => {
     console.log(data);
     console.log(data.split(","));
+    const standPowers = data.split(",");
   })
-  let standPowers = powerData.split(",");
   let standRequiemPowers = [
     "Stand Manipulation",
     "Love Train",
