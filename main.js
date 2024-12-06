@@ -14,7 +14,7 @@ function setup() {
     stand += " Requiem";
   }
   const powerData = read('standPowers.txt');
-  let standPowers = powerData.split('\n');
+  let standPowers = powerData.split(/\r?\n/);
   let standRequiemPowers = [
     "Stand Manipulation",
     "Love Train",
