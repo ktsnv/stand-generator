@@ -123,6 +123,6 @@ function createChart()
     chart.draw();
 }
 function removeCredits() {
- const credits = document.querySelector("#anychart-credits");
+ const credits = document.getElementsByClassName("anychart-credits")[0];
  credits.remove();
 }
