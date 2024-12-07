@@ -37,13 +37,13 @@ function setup() {
    })
   .then(() => {
     console.log(standPowers);
-    randomize();
+    randomize(person, stand);
    });
 }
-function randomize() {
+function randomize(p, s) {
     const container = document.querySelector("#container");
-  header("Stand Master: " + person);
-  header("Stand: " + stand);
+  header("Stand Master: " + p);
+  header("Stand: " + s);
   header("Abilities: ");
   let i = 0;
   let r = random(1,3);
