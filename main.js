@@ -35,7 +35,7 @@ function setup() {
    })
   .then(() => {
     console.log(standPowers);
-    generate(person, stand);
+    generate();
    });
 }
 function generate() {
