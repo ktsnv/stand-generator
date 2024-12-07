@@ -7,6 +7,21 @@ let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
 let standPowers;
+ let standRequiemPowers = [
+    "Stand Manipulation",
+    "Love Train",
+    "Nullification",
+    "Time Stop",
+    "Time Acceleration",
+    "Return to Zero",
+    "Infinite Death Loop",
+    "Soul Manipulation",
+    "Regeneration",
+    "Bites the Dust"
+  ]
+  let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
+  let standType1 = ["Natural","Artificial"]
+  let standType2 = ["Humanoid","Non-Humanoid"]  
 //https://stackoverflow.com/questions/45018338/javascript-fetch-api-how-to-save-output-to-variable-as-an-object-not-the-prom
 function setup() {
   let person = prompt("Please enter your name", "");
@@ -22,23 +37,11 @@ function setup() {
    })
   .then(() => {
     console.log(standPowers);
+    randomize();
    });
-  let standRequiemPowers = [
-    "Stand Manipulation",
-    "Love Train",
-    "Nullification",
-    "Time Stop",
-    "Time Acceleration",
-    "Return to Zero",
-    "Infinite Death Loop",
-    "Soul Manipulation",
-    "Regeneration",
-    "Bites the Dust"
-  ]
-  let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
-  let standType1 = ["Natural","Artificial"]
-  let standType2 = ["Humanoid","Non-Humanoid"]  
-  const container = document.querySelector("#container");
+}
+function randomize() {
+    const container = document.querySelector("#container");
   header("Stand Master: " + person);
   header("Stand: " + stand);
   header("Abilities: ");
