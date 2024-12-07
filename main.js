@@ -6,7 +6,16 @@ let standRange = random(0,6);
 let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
-const standPowers = loadTextFile('standPowers.txt'); 
+let standPowers;
+fetch('standPowers.txt')
+  .then(res => res.text())
+  .then(data => {
+    standPowers = data.split("\n");
+   })
+  .then(() => {
+    console.log(standPowers);
+   });
+//https://stackoverflow.com/questions/45018338/javascript-fetch-api-how-to-save-output-to-variable-as-an-object-not-the-prom
 function setup() {
   let person = prompt("Please enter your name", "");
   let stand = prompt("Please enter your stand's name", "");
