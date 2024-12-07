@@ -7,7 +7,7 @@ let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
 let standPowers;
-let species = ["Human", "Alien", "Rock Human", "Vampire", "Pillar Man"];
+let species = ["Human", "Alien", "Rock Human", "Vampire", "Pillar Man", "Ultimate Thing"];
 let personSpecies = species[random(0,4)];
 let standRequiemPowers = [
  "Stand Manipulation",
