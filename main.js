@@ -121,16 +121,3 @@ function createChart()
     // initiate chart drawing
     chart.draw();
 }
-async function loadTextFile(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.text();
-    return data;
-    console.log(data);
-  } catch (err) {
-    console.error(err);
-  }
-}
-    return temp;
-  })
-}*/
