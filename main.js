@@ -1,4 +1,5 @@
 anychart.onDocumentReady(setTimeout(setup,1));
+setTimeout(removeCredits,5);
 let rank = ["F","E","D","C","B","A","Infinite"];
 let standDP = random(0,6);
 let standSpeed = random(0,6);
@@ -120,4 +121,8 @@ function createChart()
     chart.container('container');
     // initiate chart drawing
     chart.draw();
+}
+function removeCredits() {
+ const credits = document.querySelector("#anychart-credits");
+ credits.remove();
 }
