@@ -7,25 +7,23 @@ let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
 let standPowers;
- let standRequiemPowers = [
-    "Stand Manipulation",
-    "Love Train",
-    "Nullification",
-    "Time Stop",
-    "Time Acceleration",
-    "Return to Zero",
-    "Infinite Death Loop",
-    "Soul Manipulation",
-    "Regeneration",
-    "Bites the Dust"
-  ]
-  let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"]
-  let standType1 = ["Natural","Artificial"]
-  let standType2 = ["Humanoid","Non-Humanoid"]  
+let standRequiemPowers = [
+ "Stand Manipulation",
+ "Love Train",
+ "Nullification",
+ "Time Stop",
+ "Time Acceleration",
+ "Return to Zero",
+ "Infinite Death Loop",
+ "Soul Manipulation",
+ "Regeneration",
+ "Bites the Dust"
+];
+let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"];
+let standType1 = ["Natural","Artificial"];
+let standType2 = ["Humanoid","Non-Humanoid"];
 //https://stackoverflow.com/questions/45018338/javascript-fetch-api-how-to-save-output-to-variable-as-an-object-not-the-prom
 function setup() {
-  let person = prompt("Please enter your name", "");
-  let stand = prompt("Please enter your stand's name", "");
   if (standPotential == 6)
   {
     stand += " Requiem";
@@ -40,45 +38,47 @@ function setup() {
     generate(person, stand);
    });
 }
-function generate(p, s) {
-    const container = document.querySelector("#container");
-  header("Stand Master: " + p);
-  header("Stand: " + s);
-  header("Abilities: ");
-  let i = 0;
-  let r = random(1,3);
-  while (i<r)
+function generate() {
+ let person = prompt("Please enter your name", "");
+ let stand = prompt("Please enter your stand's name", "");
+ const container = document.querySelector("#container");
+ header("Stand Master: " + person);
+ header("Stand: " + stand);
+ header("Abilities: ");
+ let i = 0;
+ let r = random(1,3);
+ while (i<r)
+ {
+  i++;
+  let temp = generateRandom(standPowers);
+  container.append("",temp);
+  lineBreak();
+  const index = standPowers.indexOf(temp);
+  if (index > -1) {
+   standPowers.splice(index, 1);
+  }
+  if (standPotential == 6)
   {
-    i++;
-    let temp = generateRandom(standPowers);
+    let temp = generateRandom(standRequiemPowers);
     container.append("",temp);
     lineBreak();
-    const index = standPowers.indexOf(temp);
+    const index = standRequiemPowers.indexOf(temp);
     if (index > -1) {
-      standPowers.splice(index, 1);
-    }
-    if (standPotential == 6)
-    {
-      let temp = generateRandom(standRequiemPowers);
-      container.append("",temp);
-      lineBreak();
-      const index = standRequiemPowers.indexOf(temp);
-      if (index > -1) {
-        standRequiemPowers.splice(index, 1);
-      }
+    standRequiemPowers.splice(index, 1);
     }
   }
-  header("Colors: ");
-  container.append(generateRandom(standColor) + " and " + generateRandom(standColor));
-  header("Type: ");
-  container.append(generateRandom(standType1) + " " + generateRandom(standType2));
-  header("Destructive Power: "+ rank[standDP]);
-  header("Speed: "+ rank[standSpeed]);
-  header("Range: "+ rank[standRange]);
-  header("Persistence: "+ rank[standPersistence]);
-  header("Precision: "+ rank[standPrecision]);
-  header("Potential: "+ rank[standPotential]);
-  createChart();
+ }
+ header("Colors: ");
+ container.append(generateRandom(standColor) + " and " + generateRandom(standColor));
+ header("Type: ");
+ container.append(generateRandom(standType1) + " " + generateRandom(standType2));
+ header("Destructive Power: "+ rank[standDP]);
+ header("Speed: "+ rank[standSpeed]);
+ header("Range: "+ rank[standRange]);
+ header("Persistence: "+ rank[standPersistence]);
+ header("Precision: "+ rank[standPrecision]);
+ header("Potential: "+ rank[standPotential]);
+ createChart();
 }
 function lineBreak() {
   const container = document.querySelector("#container");
