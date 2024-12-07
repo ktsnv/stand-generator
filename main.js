@@ -7,6 +7,8 @@ let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
 let standPowers;
+let species = ["Human", "Alien", "Rock Human", "Vampire", "Pillar Man"];
+let personSpecies = species[random(0,4)];
 let standRequiemPowers = [
  "Stand Manipulation",
  "Love Train",
@@ -17,7 +19,9 @@ let standRequiemPowers = [
  "Infinite Death Loop",
  "Soul Manipulation",
  "Regeneration",
- "Bites the Dust"
+ "Bites the Dust",
+ "Reality Splitting",
+ "Calamity Manipulation"
 ];
 let standColor = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Purple", "White", "Black", "Brown", "Gray"];
 let standType1 = ["Natural","Artificial"];
@@ -43,6 +47,7 @@ function generate() {
  }
  const container = document.querySelector("#container");
  header("Stand Master: " + person);
+ header("Species: " + personSpecies);
  header("Stand: " + stand);
  header("Abilities: ");
  let i = 0;
