@@ -24,10 +24,6 @@ let standType1 = ["Natural","Artificial"];
 let standType2 = ["Humanoid","Non-Humanoid"];
 //https://stackoverflow.com/questions/45018338/javascript-fetch-api-how-to-save-output-to-variable-as-an-object-not-the-prom
 function setup() {
-  if (standPotential == 6)
-  {
-    stand += " Requiem";
-  }
   fetch('standPowers.txt')
   .then(res => res.text())
   .then(data => {
@@ -41,6 +37,10 @@ function setup() {
 function generate() {
  let person = prompt("Please enter your name", "");
  let stand = prompt("Please enter your stand's name", "");
+ if (standPotential == 6)
+ {
+   stand += " Requiem";
+ }
  const container = document.querySelector("#container");
  header("Stand Master: " + person);
  header("Stand: " + stand);
