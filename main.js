@@ -8,7 +8,8 @@ let standPrecision = random(0,6);
 let standPotential = random(0,6);
 let standPowers;
 let species = ["Human", "Human", "Human", "Human", "Alien", "Rock Human", "Vampire", "Pillar Man", "Ultimate Thing"];
-let personSpecies = species[random(0,8)];
+let jobs = ["Dentist","Doctor","Construction Worker","Dog Sitter","Student","Chef","Writer","Comic Book Artist","Speedwagon Foundation Member","Fruit Seller","Steel Ball Run Racer","Oceanographer","Prison Guard","Gang Member"];
+let locations = ["Morioh","England","New York","Egypt","Venice","Japan","Naples","Rome","Florida","San Diego","Hawaii","Toronto"];
 let standRequiemPowers = [
  "Stand Manipulation",
  "Love Train",
@@ -46,8 +47,10 @@ function generate() {
    stand += " Requiem";
  }
  const container = document.querySelector("#container");
- header("Stand Master: " + person);
- header("Species: " + personSpecies);
+ header("Stand User: " + person);
+ header("User Species: " + species[random(0,species.length-1)]);
+ header("User Occupation: " + jobs[random(0,jobs.length-1)]);
+ header("User Birthplace: " + locations[random(0,locations.length-1)]);
  header("Stand: " + stand);
  header("Abilities: ");
  let i = 0;
