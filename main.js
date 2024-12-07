@@ -48,11 +48,11 @@ function generate() {
  }
  const container = document.querySelector("#container");
  header("Stand User: " + person);
- container.append("User Species: " + species[random(0,species.length-1)]);
+ container.append("Species: " + species[random(0,species.length-1)]);
  lineBreak();
- container.append("User Occupation: " + jobs[random(0,jobs.length-1)]);
+ container.append("Occupation: " + jobs[random(0,jobs.length-1)]);
  lineBreak();
- container.append("User Birthplace: " + locations[random(0,locations.length-1)]);
+ container.append("Birthplace: " + locations[random(0,locations.length-1)]);
  lineBreak();
  header("Stand: " + stand);
  header("Abilities: ");
