@@ -37,10 +37,10 @@ function setup() {
    })
   .then(() => {
     console.log(standPowers);
-    randomize(person, stand);
+    generate(person, stand);
    });
 }
-function randomize(p, s) {
+function generate(p, s) {
     const container = document.querySelector("#container");
   header("Stand Master: " + p);
   header("Stand: " + s);
@@ -131,13 +131,6 @@ async function loadTextFile(url) {
     console.error(err);
   }
 }
-/*function fetchData() {
-    fetch('standPowers.txt')
-  .then(response => response.text())
-  .then((data) => {
-    console.log(data.split("\n"));
-    let temp = data.split("\n");
-    console.log(temp);
     return temp;
   })
 }*/
