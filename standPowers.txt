@@ -4,7 +4,6 @@ Water Manipulation
 Air Manipulation
 Ice Manipulation
 Rain Manipulation
-Calamity Manipulation
 Dinosaur Transformation
 Sound Manipulation
 Blood Manipulation
@@ -102,3 +101,4 @@ Nuts and Bolts
 Card Storing
 Face Differention
 Heat Manipulation
+Tax Filing
