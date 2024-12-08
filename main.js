@@ -7,6 +7,7 @@ let standPersistence = random(0,6);
 let standPrecision = random(0,6);
 let standPotential = random(0,6);
 let standPowers;
+let styles = ["None","Standard Hamon","Bubble Hamon","Spin","Boxing","Swordsman","Spearman","Marksman","Sunlight Hamon","Saw Bowler Hat"]
 let species = ["Human", "Human", "Human", "Human", "Alien", "Rock Human", "Vampire", "Pillar Man", "Ultimate Thing"];
 let jobs = ["Dentist","Doctor","Construction Worker","Dog Sitter","Student","Chef","Writer","Comic Book Artist","Speedwagon Foundation Member","Fruit Seller","Steel Ball Run Racer","Oceanographer","Prison Guard","Gang Member"];
 let locations = ["Morioh","England","New York","Egypt","Venice","Japan","Naples","Rome","Florida","San Diego","Hawaii","Toronto"];
@@ -53,6 +54,8 @@ function generate() {
  container.append("Occupation: " + jobs[random(0,jobs.length-1)]);
  lineBreak();
  container.append("Birthplace: " + locations[random(0,locations.length-1)]);
+ lineBreak();
+ container.append("Fighting Style: " + styles[random(0,styles.length-1)]);
  lineBreak();
  header("Stand: " + stand);
  header("Abilities: ");
