@@ -9,7 +9,7 @@ let standPotential = random(0,6);
 let standPowers;
 let styles = ["None","Standard Hamon","Bubble Hamon","Spin","Boxing","Swordsman","Spearman","Marksman","Sunlight Hamon","Saw Bowler Hat"]
 let species = ["Human", "Human", "Human", "Human", "Alien", "Rock Human", "Vampire", "Pillar Man", "Ultimate Thing"];
-let jobs = ["Dentist","Doctor","Construction Worker","Dog Sitter","Student","Chef","Writer","Comic Book Artist","Speedwagon Foundation Member","Fruit Seller","Steel Ball Run Racer","Oceanographer","Prison Guard","Gang Member"];
+let jobs = ["Dentist","Doctor","Construction Worker","Dog Sitter","Student","Chef","Writer","Comic Book Artist","Speedwagon Foundation Member","Fruit Seller","Horse Jockey","Oceanographer","Prison Guard","Gang Member"];
 let locations = ["Morioh","England","New York","Egypt","Venice","Japan","Naples","Rome","Florida","San Diego","Hawaii","Toronto"];
 let standRequiemPowers = [
  "Stand Manipulation",
