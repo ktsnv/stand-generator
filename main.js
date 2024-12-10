@@ -131,7 +131,7 @@ function createChart()
     chart.legend(false);
     chart.background().fill("red", 0);
     // set container id for the chart
-    chart.container('container');
+    chart.container('chart');
     // initiate chart drawing
     chart.draw();
    removeCredits();
