@@ -83,7 +83,9 @@ function generate() {
   }
  }
  header("Colors: ");
- container.append(generateRandom(standColor) + " and " + generateRandom(standColor));
+ let color1 = generateRandom(standColor);
+ let color2 = generateRandom(standColor);
+ container.append(color1 + " and " + color2);
  header("Type: ");
  container.append(generateRandom(standType1) + " " + generateRandom(standType2));
  header("Destructive Power: "+ rank[standDP]);
@@ -92,7 +94,8 @@ function generate() {
  header("Persistence: "+ rank[standPersistence]);
  header("Precision: "+ rank[standPrecision]);
  header("Potential: "+ rank[standPotential]);
- createChart();
+ //createChart();
+ image("A " + color1 + " and " + color2 + " stand from JJBA named " + stand);
 }
 function lineBreak() {
   const container = document.querySelector("#container");
@@ -104,6 +107,12 @@ function header(arr) {
   const header = document.createElement("h1");
   header.textContent = arr;
   container.append(header);
+}
+function image(prompt) {
+  const container = document.querySelector("#container");
+  const image = document.createElement("img");
+  image.src = https://image.pollinations.ai/prompt/+encodeURIComponent(prompt);
+  container.append(image);
 }
 function generateRandom(arr) {
   return arr[random(0,arr.length-1)]
