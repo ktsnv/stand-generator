@@ -111,7 +111,7 @@ function header(arr) {
 function image(prompt) {
   const container = document.querySelector("#container");
   const image = document.createElement("img");
-  image.src = https://image.pollinations.ai/prompt/+encodeURIComponent(prompt);
+  image.src = "https://image.pollinations.ai/prompt/"+encodeURIComponent(prompt);
   container.append(image);
 }
 function generateRandom(arr) {
