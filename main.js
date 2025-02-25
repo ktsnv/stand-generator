@@ -97,7 +97,7 @@ function generate() {
  header("Precision: "+ rank[standPrecision]);
  header("Potential: "+ rank[standPotential]);
  //createChart();
- image("A " + type + color1 + " and " + color2 + " stand from JJBA named " + stand + " in a 2d manga style.");
+ image("A " + type + color1 + " and " + color2 + " stand from JJBA named " + stand + " in a 2d seinen manga style with heavy shading.");
 }
 function lineBreak() {
   const container = document.querySelector("#container");
