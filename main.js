@@ -65,6 +65,7 @@ function generate() {
  {
   i++;
   let temp = generateRandom(standPowers);
+  
   container.append("",temp);
   lineBreak();
   const index = standPowers.indexOf(temp);
@@ -87,7 +88,8 @@ function generate() {
  let color2 = generateRandom(standColor);
  container.append(color1 + " and " + color2);
  header("Type: ");
- container.append(generateRandom(standType1) + " " + generateRandom(standType2));
+ let type = generateRandom(standType1) + " " + generateRandom(standType2);
+ container.append(type);
  header("Destructive Power: "+ rank[standDP]);
  header("Speed: "+ rank[standSpeed]);
  header("Range: "+ rank[standRange]);
@@ -95,7 +97,7 @@ function generate() {
  header("Precision: "+ rank[standPrecision]);
  header("Potential: "+ rank[standPotential]);
  //createChart();
- image("A " + color1 + " and " + color2 + " stand from JJBA named " + stand + " in a manga style.");
+ image("A " + type + color1 + " and " + color2 + " stand from JJBA named " + stand + " in a Hirohiko Araki style.");
 }
 function lineBreak() {
   const container = document.querySelector("#container");
